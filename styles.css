@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&family=Press+Start+2P&family=Squada+One&display=swap");
+
+body {
+    font-family: "Press Start 2P", sans-serif;
+    background-image: url("./assets/rpg-background.jpg");
+    padding: 50px;
+}
+
+#select-champion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-title {
+    color: #8f1111;
+    background-color: #ffbb00;
+    font-size: 32px;
+    font-family: "Press Start 2P", cursive;
+    padding: 2px;
+    text-align: center;
+}
+
+.game-subtitle {
+    color: rgb(168, 181, 238);
+    text-shadow: 2px 2px #11468f;
+    padding: 25px;
+    text-align: center;
+}
+
+.cards,
+.attacks-cards {
+    display: flex;
+    gap: 10px;
+}
+
+.champion-cards {
+    width: 320px;
+    height: 150px;
+    background: -webkit-linear-gradient(#f3ba78, #af4261);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.champion-cards img {
+    width: 140px;
+}
+
+#champion-button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid rgb(255, 251, 0);
+    color: rgb(255, 251, 0);
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    background: -webkit-linear-gradient(#237fd4, #f3ba78);
+}
+
+#select-attack {
+    flex-direction: column;
+    align-items: center;
+}
+
+.attack-button {
+    background-color: #11468f;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-color: transparent;
+    width: 80px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+#messages {
+    width: 280px;
+    background: #eeeeee;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
+
+#restart-button {
+    border: none;
+    color: #11468f;
+}
+
+.attacks {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    color: white;
+}
+
+#player-life,
+#enemy-life {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.player-skills,
+.enemy-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#see-map {
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+#see-map button {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-family: "Press Start 2P", sans-serif;
+    margin: 10px 0;
+}
+
+#signature {
+    color: rgb(75, 247, 104);
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 1000px) {
+    .cards,
+    .attacks-cards {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 300px) {
+    #see-map div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>RETRO ARENA</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <section id="select-champion">
+            <h1 class="game-title" class="">RETRO ARENA</h1>
+
+            <h2 class="game-subtitle">Select your Champion:</h2>
+
+            <div id="cardsContainer" class="cards"></div>
+
+            <button id="champion-button">SELECT</button>
+        </section>
+
+        <section id="see-map">
+            <h2 class="game-title" class="">
+                Walk the map with your Champion!
+            </h2>
+            <canvas id="map"></canvas>
+            <button
+                onmouseup="stopMovement()"
+                onmousedown="moveUp()"
+                ontouchstart="moveUp()"
+                ontouchend="stopMovement()"
+            >
+                UP
+            </button>
+            <div>
+                <button
+                    onmouseup="stopMovement()"
+                    onmousedown="moveLeft()"
+                    ontouchstart="moveLeft()"
+                    ontouchend="stopMovement()"
+                >
+                    LEFT
+                </button>
+                <button
+                    onmouseup="stopMovement()"
+                    onmousedown="moveDown()"
+                    ontouchstart="moveDown()"
+                    ontouchend="stopMovement()"
+                >
+                    DOWN
+                </button>
+                <button
+                    onmouseup="stopMovement()"
+                    onmousedown="moveRight()"
+                    ontouchstart="moveRight()"
+                    ontouchend="stopMovement()"
+                >
+                    RIGHT
+                </button>
+            </div>
+        </section>
+
+        <section id="select-attack">
+            <h1 class="game-title" class="">Warriors, Mages and Rogues</h1>
+
+            <h2 class="game-subtitle">Select your attack:</h2>
+
+            <div id="attacksContainer" class="attacks-cards"></div>
+
+            <div id="messages">
+                <p id="score">Good Luck!</p>
+
+                <section id="restart">
+                    <p id="restart-button">Restart</p>
+                </section>
+            </div>
+
+            <div class="attacks">
+                <div class="player-skills">
+                    <p id="player-life">0</p>
+                    <p id="player-champion"></p>
+                    <div id="player-attacks"></div>
+                </div>
+                <div class="enemy-skills">
+                    <p id="enemy-life">0</p>
+                    <p id="enemy-champion"></p>
+                    <div id="enemy-attacks"></div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div id="signature">
+                <marquee direction="right">Powered by Acab1375</marquee> 
+            </div>
+        </footer>
+        <script src="./retro-arena.js"></script>
+    </body>
+</html>
